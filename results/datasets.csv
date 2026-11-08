@@ -1,0 +1,13 @@
+dataset,role,classes,mode,windows
+UTD-MHAD,"development, few-subject",27,segment,783
+ActRecTut,"development, few-subject",12,segment,798
+Opportunity,"development, few-subject",5,segment,10550
+UCI-HAR,"development, many-subject",6,segment,8188
+UniMiB-SHAR,"development, many-subject",17,segment,7195
+HAPT,"development, many-subject",12,segment,9056
+SAD,"development, many-subject",7,bout,8260
+WISDM,"development, many-subject",6,bout,34097
+PAMAP2,"confirmatory, few-subject",13,bout,12786
+WEAR,"confirmatory, many-subject",18,bout,26739
+UCA-EHAR,"confirmatory, many-subject",12,segment,16554
+UP-Fall,"confirmatory, many-subject",11,segment,8974
