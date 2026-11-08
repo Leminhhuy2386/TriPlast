@@ -2,9 +2,10 @@
 
 > [!NOTE]
 > **This is a preview repository.** The accompanying paper is under review. This repository currently holds only
-> a summary of the method, the main results and an overview of the code. **The full code (Python library, experiment
-> scripts, C99 core and STM32 firmware), run records, provenance files and the analysis plan with its amendments will
-> be released in this repository once the paper is accepted.** Until then, please contact the author for questions.
+> a summary of the method, the main results and a few core source files (see [Code](#code)). **The full code (Python
+> library, experiment scripts, C99 core and STM32 firmware), run records, provenance files and the analysis plan with
+> its amendments will be released in this repository once the paper is accepted.** Until then, please contact the
+> author for questions.
 
 **Paper:** M. H. Le, *Forward-Only Wearer Adaptation of Activity Recognizers on Microcontrollers When User
 Confirmations Can Be Wrong*, under review (2026).
@@ -122,9 +123,24 @@ Latency is measured with the DWT cycle counter; RAM is the static memory of the 
 [`results/device_latency_ram.csv`](results/device_latency_ram.csv). No energy is reported (no measurement device was
 used).
 
-## Code (to be released)
+## Code
 
-The full code base is held back until acceptance. It is organized as follows:
+### Included in this preview
+
+A few core files, copied unchanged from the project repository and placed at their paths in the full release:
+
+| File | Content |
+|---|---|
+| [`src/models/triplast.py`](src/models/triplast.py) | TriPlast in PyTorch: `G`, `F`, `P`, rehearsal over class means and pseudo-labelled sums; a vectorized stream and a window-by-window reference |
+| [`src/data/features.py`](src/data/features.py) | the fixed value-domain features (`level3+stats`, 88 per channel) |
+| [`src/data/adapt_protocol.py`](src/data/adapt_protocol.py) | the leakage-free per-person split into calibration pool and scored windows (segment and bout mode) |
+| [`src/evaluation/metrics.py`](src/evaluation/metrics.py) | macro-F1, gain and harm as reported |
+| [`firmware/nucleo_l4r5zi_triplast/Core/Inc/tp_core.h`](firmware/nucleo_l4r5zi_triplast/Core/Inc/tp_core.h) | the interface of the C99 core that runs on the boards and serves as the PC fixed-point reference |
+
+These files are provided for reading; they are not runnable on their own. References inside them to `docs/`,
+`scripts/` and other modules point to files of the full release.
+
+### Full code base (to be released after acceptance)
 
 | Part | Content |
 |---|---|
@@ -145,4 +161,5 @@ The citation will be added after acceptance.
 
 ## License
 
-All rights reserved until the full release. A license will be added together with the code.
+All rights reserved until the full release, including the source files in this preview. A license will be added
+together with the full code.
