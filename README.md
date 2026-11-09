@@ -7,9 +7,6 @@
 > its amendments will be released in this repository once the paper is accepted.** Until then, please contact the
 > author for questions.
 
-**Paper:** M. H. Le, *Forward-Only Wearer Adaptation of Activity Recognizers on Microcontrollers When User
-Confirmations Can Be Wrong*, under review (2026).
-Contact: Minh Huy Le, Phenikaa University, Hanoi, Vietnam (huy.leminh@phenikaa-uni.edu.vn).
 
 ![Graphical abstract](figures/graphical_abstract.png)
 
